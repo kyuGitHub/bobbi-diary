@@ -9,12 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --pink: #ff6b9d;
-            --pink-light: #ffb3cc;
-            --pink-pale: #ffd6e8;
-            --pink-bg: #fff8fb;
-            --pink-card: #ffeef5;
-            --pink-tag-bg: #fff0f7;
+            --blue: #4a90e2;
+            --blue-light: #90c4f0;
+            --blue-pale: #c8e0f8;
+            --blue-bg: #f5f9ff;
+            --blue-card: #e8f2fd;
+            --blue-tag-bg: #edf5ff;
             --charcoal: #4a4a5a;
             --charcoal-light: #7a7a8a;
             --charcoal-pale: #e8e8f0;
@@ -28,14 +28,14 @@
 
         body {
             font-family: 'Noto Sans KR', sans-serif;
-            background-color: var(--pink-bg);
+            background-color: var(--blue-bg);
             color: var(--text-main);
             line-height: 1.7;
         }
 
         /* ── 헤더 ── */
         header {
-            background: linear-gradient(135deg, #ff85ad 0%, var(--pink-light) 55%, #ffd6e8 100%);
+            background: linear-gradient(135deg, #3a7bd5 0%, var(--blue-light) 55%, #c8e0f8 100%);
             padding: 56px 20px 44px;
             text-align: center;
             position: relative;
@@ -67,14 +67,14 @@
             display: block;
             margin-bottom: 14px;
             letter-spacing: 8px;
-            filter: drop-shadow(0 4px 12px rgba(255,107,157,0.3));
+            filter: drop-shadow(0 4px 12px rgba(74,144,226,0.3));
         }
 
         header h1 {
             font-size: 2rem;
             font-weight: 700;
             color: white;
-            text-shadow: 0 2px 12px rgba(255,107,157,0.35);
+            text-shadow: 0 2px 12px rgba(74,144,226,0.35);
             margin-bottom: 8px;
             letter-spacing: -0.5px;
         }
@@ -88,7 +88,7 @@
         /* ── 네비게이션 ── */
         nav {
             background: white;
-            border-bottom: 2px solid var(--pink-pale);
+            border-bottom: 2px solid var(--blue-pale);
             padding: 0 20px;
             display: flex;
             justify-content: center;
@@ -96,7 +96,7 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 16px rgba(255,107,157,0.08);
+            box-shadow: 0 2px 16px rgba(74,144,226,0.08);
         }
 
         nav a {
@@ -112,8 +112,8 @@
 
         nav a:hover,
         nav a.active {
-            color: var(--pink);
-            border-bottom-color: var(--pink);
+            color: var(--blue);
+            border-bottom-color: var(--blue);
         }
 
         /* ── 메인 ── */
@@ -129,8 +129,8 @@
             border-radius: var(--border-radius);
             padding: 26px 30px;
             margin-bottom: 40px;
-            border: 1.5px solid var(--pink-pale);
-            box-shadow: 0 4px 20px rgba(255,107,157,0.07);
+            border: 1.5px solid var(--blue-pale);
+            box-shadow: 0 4px 20px rgba(74,144,226,0.07);
             position: relative;
         }
 
@@ -149,14 +149,14 @@
         }
 
         .intro-box strong {
-            color: var(--pink);
+            color: var(--blue);
         }
 
         /* ── 섹션 타이틀 ── */
         .section-title {
             font-size: 0.95rem;
             font-weight: 700;
-            color: var(--pink);
+            color: var(--blue);
             margin-bottom: 18px;
             display: flex;
             align-items: center;
@@ -167,7 +167,7 @@
             content: '';
             flex: 1;
             height: 2px;
-            background: linear-gradient(to right, var(--pink-pale), transparent);
+            background: linear-gradient(to right, var(--blue-pale), transparent);
             border-radius: 2px;
         }
 
@@ -183,15 +183,15 @@
             background: white;
             border-radius: var(--border-radius);
             padding: 24px 20px;
-            border: 1.5px solid var(--pink-card);
-            box-shadow: 0 3px 16px rgba(255,107,157,0.06);
+            border: 1.5px solid var(--blue-card);
+            box-shadow: 0 3px 16px rgba(74,144,226,0.06);
             text-align: center;
             transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .member-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 28px rgba(255,107,157,0.13);
+            box-shadow: 0 8px 28px rgba(74,144,226,0.13);
         }
 
         .member-card.neukgu {
@@ -225,7 +225,7 @@
         .member-role {
             font-size: 0.75rem;
             font-weight: 600;
-            color: var(--pink);
+            color: var(--blue);
             margin-bottom: 12px;
         }
 
@@ -245,7 +245,7 @@
             margin-bottom: 12px;
         }
 
-        .member-color.pink { background: var(--pink-tag-bg); color: var(--pink); }
+        .member-color.pink { background: var(--blue-tag-bg); color: var(--blue); }
         .member-color.charcoal { background: var(--charcoal-pale); color: var(--charcoal); }
         .member-color.gray { background: #f0f0f0; color: #aaa; }
 
@@ -282,15 +282,15 @@
             border-radius: var(--border-radius);
             padding: 24px 30px;
             margin-bottom: 40px;
-            border: 1.5px solid var(--pink-pale);
-            box-shadow: 0 3px 16px rgba(255,107,157,0.05);
+            border: 1.5px solid var(--blue-pale);
+            box-shadow: 0 3px 16px rgba(74,144,226,0.05);
             text-align: center;
         }
 
         .farm-structure-title {
             font-size: 0.85rem;
             font-weight: 700;
-            color: var(--pink);
+            color: var(--blue);
             margin-bottom: 16px;
         }
 
@@ -318,7 +318,7 @@
 
         .farm-arrow {
             font-size: 1.1rem;
-            color: var(--pink-light);
+            color: var(--blue-light);
         }
 
         .farm-structure p {
@@ -333,14 +333,14 @@
             background: white;
             border-radius: var(--border-radius);
             margin-bottom: 14px;
-            border: 1.5px solid var(--pink-card);
-            box-shadow: 0 3px 16px rgba(255,107,157,0.05);
+            border: 1.5px solid var(--blue-card);
+            box-shadow: 0 3px 16px rgba(74,144,226,0.05);
             overflow: hidden;
             transition: box-shadow 0.22s, transform 0.22s;
         }
 
         .diary-card:hover {
-            box-shadow: 0 8px 30px rgba(255,107,157,0.13);
+            box-shadow: 0 8px 30px rgba(74,144,226,0.13);
             transform: translateY(-2px);
         }
 
@@ -357,7 +357,7 @@
 
         .card-date {
             font-size: 0.78rem;
-            color: var(--pink-light);
+            color: var(--blue-light);
             font-weight: 600;
             margin-bottom: 6px;
             display: flex;
@@ -367,7 +367,7 @@
         }
 
         .badge-new {
-            background: var(--pink);
+            background: var(--blue);
             color: white;
             font-size: 0.65rem;
             padding: 2px 7px;
@@ -402,8 +402,8 @@
         }
 
         .card-tag {
-            background: var(--pink-tag-bg);
-            color: var(--pink);
+            background: var(--blue-tag-bg);
+            color: var(--blue);
             font-size: 0.72rem;
             padding: 3px 10px;
             border-radius: 20px;
@@ -414,8 +414,8 @@
             width: 30px;
             height: 30px;
             border-radius: 50%;
-            background: var(--pink-tag-bg);
-            color: var(--pink);
+            background: var(--blue-tag-bg);
+            color: var(--blue);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -426,7 +426,7 @@
         }
 
         .diary-card-header:hover .card-toggle {
-            background: var(--pink);
+            background: var(--blue);
             color: white;
         }
 
@@ -434,7 +434,7 @@
         .diary-content {
             display: none;
             padding: 0 26px 26px;
-            border-top: 1.5px solid var(--pink-card);
+            border-top: 1.5px solid var(--blue-card);
         }
 
         .diary-content.open { display: block; }
@@ -451,8 +451,8 @@
         .diary-body strong { color: #333; }
 
         .diary-body .highlight {
-            background: var(--pink-tag-bg);
-            border-left: 3px solid var(--pink);
+            background: var(--blue-tag-bg);
+            border-left: 3px solid var(--blue);
             padding: 12px 16px;
             border-radius: 0 12px 12px 0;
             margin: 18px 0;
@@ -477,7 +477,7 @@
         /* ── 날짜 구분선 ── */
         .divider {
             text-align: center;
-            color: var(--pink-pale);
+            color: var(--blue-pale);
             font-size: 1.4rem;
             margin: 8px 0;
             letter-spacing: 6px;
@@ -489,10 +489,10 @@
             padding: 44px 20px;
             color: #ccc;
             font-size: 0.8rem;
-            border-top: 1px solid var(--pink-card);
+            border-top: 1px solid var(--blue-card);
         }
 
-        footer span { color: var(--pink-light); }
+        footer span { color: var(--blue-light); }
 
         /* ── 반응형 ── */
         @media (max-width: 600px) {

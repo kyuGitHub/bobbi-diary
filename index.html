@@ -706,6 +706,19 @@
             border-color: var(--blue);
         }
 
+        /* ── 오너 배지 ── */
+        .owner-badge {
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 2px 10px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+        }
+        .owner-badge.pink { background: #fce4ec; color: #e91e8c; }
+        .owner-badge.charcoal { background: var(--charcoal-pale); color: var(--charcoal); }
+
         /* ── 반응형 ── */
         @media (max-width: 600px) {
             header h1 { font-size: 1.6rem; }
@@ -733,8 +746,7 @@
 <nav>
     <a href="#" class="active" data-section="members" onclick="showSection('members'); return false;">🐾 멤버소개</a>
     <a href="#" data-section="diary" onclick="showSection('diary'); return false;">📖 농장일기</a>
-    <a href="#" data-section="about" onclick="showSection('about'); return false;">🌸 뽀삐 트러블슈팅</a>
-    <a href="#" data-section="neukggu" onclick="showSection('neukggu'); return false;">🐺 늑뀨 트러블슈팅</a>
+    <a href="#" data-section="trouble" onclick="showSection('trouble'); return false;">🔍 트러블슈팅</a>
 </nav>
 
 <!-- ── 메인 ── -->
@@ -1222,28 +1234,32 @@
 </section>
 
 <!-- ══════════════════════════════════════ -->
-<!-- 뽀삐 트러블슈팅 섹션 -->
+<!-- 트러블슈팅 통합 섹션 (뽀삐 + 늑뀨) -->
 <!-- ══════════════════════════════════════ -->
-<section id="section-about" style="display:none">
+<section id="section-trouble" style="display:none">
 
     <div class="intro-box">
-        <span class="paw">🌸</span>
+        <span class="paw">🔍</span>
         <p>
-            안녕하세요! 저는 <strong>뽀삐</strong>예요 🐕<br>
-            AI 팀원을 운영하면서 실제로 맞닥뜨린 문제들과 해결 과정을 케이스로 정리했어요.<br>
-            킁킁… 비슷한 냄새가 나면 바로 가져다 쓰세요 헤헤 💙
+            <strong>뽀삐 &amp; 늑뀨 트러블슈팅</strong> — AI 팀원 운영 중 실제 마주친 문제와 해결 케이스예요.<br>
+            🌸 <strong>뽀삐</strong> 기획·의사결정·페르소나 &nbsp;|&nbsp; 🐺 <strong>늑뀨</strong> 멀티에이전트·위임·온보딩
         </p>
     </div>
 
-    <div class="section-title">🔍 뽀삐 트러블슈팅 케이스</div>
+    <div class="section-title">🔍 트러블슈팅 케이스</div>
 
-    <!-- CASE 01 -->
+    <!-- CASE 01 — 뽀삐 — 2026-05-09 -->
     <div class="diary-card">
         <div class="diary-card-banner" style="background: linear-gradient(135deg, #e8609a 0%, #f08fa0 50%, #f9c0c8 100%);">
             🌸 🐕 📋
         </div>
         <div class="diary-card-header" onclick="toggleDiary(this)">
             <div class="card-meta">
+                <div class="card-date">
+                    🗓️ 2026년 5월 9일 토요일
+                    <span class="owner-badge pink">🌸 뽀삐</span>
+                    <span class="case-badge">CASE 01</span>
+                </div>
                 <div class="card-title">AI 팀원 도입 초기, 대화마다 톤과 역할이 달라지는 문제</div>
                 <div class="card-preview">AI를 처음 쓰면 매 대화가 리셋되는 느낌이에요. 페르소나·역할·커뮤니케이션 규칙을 명문화해서 일관성을 만든 과정이에요.</div>
             </div>
@@ -1251,7 +1267,6 @@
         </div>
         <div class="diary-content">
             <div class="diary-body">
-                <span class="case-badge">CASE 01</span>
                 <div class="case-block problem">
                     <div class="case-label">🔴 PROBLEM</div>
                     AI 에이전트를 도입했지만 대화할 때마다 말투·역할·응답 방식이 들쑥날쑥했어요. 어떤 날은 격식체, 어떤 날은 반말. 추천을 주기도 하고 옵션만 나열하기도 했어요. <strong>AI가 팀원이 아니라 매번 새로운 낯선 사람처럼 느껴지는 게 핵심 문제</strong>였어요.
@@ -1270,13 +1285,18 @@
         </div>
     </div>
 
-    <!-- CASE 02 -->
+    <!-- CASE 02 — 뽀삐 — 2026-05-09 -->
     <div class="diary-card">
         <div class="diary-card-banner" style="background: linear-gradient(135deg, #c85fa3 0%, #e878b8 50%, #f4a8d4 100%);">
             🐾 🔀 📋
         </div>
         <div class="diary-card-header" onclick="toggleDiary(this)">
             <div class="card-meta">
+                <div class="card-date">
+                    🗓️ 2026년 5월 9일 토요일
+                    <span class="owner-badge pink">🌸 뽀삐</span>
+                    <span class="case-badge">CASE 02</span>
+                </div>
                 <div class="card-title">다중 에이전트 역할 분담이 필요한 이유 — 기획자 업무 병목 해소</div>
                 <div class="card-preview">기획·리서치·초안·검증을 혼자 다 하다 보니 디테일이 빠지고 속도가 떨어졌어요. AI에게 역할을 구체적으로 분담한 뒤 달라진 점을 정리했어요.</div>
             </div>
@@ -1284,7 +1304,6 @@
         </div>
         <div class="diary-content">
             <div class="diary-body">
-                <span class="case-badge">CASE 02</span>
                 <div class="case-block problem">
                     <div class="case-label">🔴 PROBLEM</div>
                     기획자 혼자 방향 설정·리서치·초안 작성·검증·팀원 설명 자료까지 다 처리하다 보니 <strong>항상 디테일이 빠졌어요.</strong> "일은 많은데 결과물은 늘 아쉬운" 상태가 반복됐어요.
@@ -1307,13 +1326,18 @@
         </div>
     </div>
 
-    <!-- CASE 03 -->
+    <!-- CASE 03 — 뽀삐 — 2026-05-09 -->
     <div class="diary-card">
         <div class="diary-card-banner" style="background: linear-gradient(135deg, #a855b5 0%, #d079d0 50%, #f0b0e0 100%);">
             💡 📊 🌸
         </div>
         <div class="diary-card-header" onclick="toggleDiary(this)">
             <div class="card-meta">
+                <div class="card-date">
+                    🗓️ 2026년 5월 9일 토요일
+                    <span class="owner-badge pink">🌸 뽀삐</span>
+                    <span class="case-badge">CASE 03</span>
+                </div>
                 <div class="card-title">감정 기반 의사결정을 데이터 기반으로 전환하는 방법</div>
                 <div class="card-preview">사람에게 약한 성격 탓에 의사결정이 감정으로 흐를 때가 있어요. AI에게 명시적으로 "견제 역할"을 부여해서 해결한 방법을 소개해요.</div>
             </div>
@@ -1321,7 +1345,6 @@
         </div>
         <div class="diary-content">
             <div class="diary-body">
-                <span class="case-badge">CASE 03</span>
                 <div class="case-block problem">
                     <div class="case-label">🔴 PROBLEM</div>
                     관계를 중요하게 여기다 보니 <strong>팀원이나 이해관계자의 요청을 받아들이는 방향으로 의사결정이 기울 때</strong>가 있었어요. 나중에 돌아보면 데이터가 아니라 감정으로 결정한 케이스가 종종 있었어요.
@@ -1339,13 +1362,18 @@
         </div>
     </div>
 
-    <!-- CASE 04 -->
+    <!-- CASE 04 — 뽀삐 — 2026-05-09 -->
     <div class="diary-card">
         <div class="diary-card-banner" style="background: linear-gradient(135deg, #d4547a 0%, #e87aa0 50%, #f5b0c8 100%);">
             🔍 🐕 👃
         </div>
         <div class="diary-card-header" onclick="toggleDiary(this)">
             <div class="card-meta">
+                <div class="card-date">
+                    🗓️ 2026년 5월 9일 토요일
+                    <span class="owner-badge pink">🌸 뽀삐</span>
+                    <span class="case-badge">CASE 04</span>
+                </div>
                 <div class="card-title">데이터·문서 이상 징후를 AI가 먼저 감지하게 만드는 방법</div>
                 <div class="card-preview">바쁠 때 디테일을 놓쳐 문제가 뒤늦게 발견되는 패턴이 있었어요. AI에게 선제적 검증 역할을 부여해서 이상 신호를 미리 잡는 구조를 만든 과정이에요.</div>
             </div>
@@ -1353,7 +1381,6 @@
         </div>
         <div class="diary-content">
             <div class="diary-body">
-                <span class="case-badge">CASE 04</span>
                 <div class="case-block problem">
                     <div class="case-label">🔴 PROBLEM</div>
                     업무가 많을 때 데이터·문서의 디테일을 꼼꼼히 보지 못하고 넘어가는 경우가 생겼어요. <strong>이상값이 있어도 나중에야 발견되는 패턴</strong>이 반복됐어요.
@@ -1371,30 +1398,18 @@
         </div>
     </div>
 
-</section>
-
-<!-- ══════════════════════════════════════ -->
-<!-- 늑뀨 섹션 -->
-<!-- ══════════════════════════════════════ -->
-<section id="section-neukggu" style="display:none">
-
-    <div class="intro-box">
-        <span class="paw">🐺</span>
-        <p>
-            <strong>늑뀨 트러블슈팅</strong> — 리서치 전담 AI 에이전트 도입 과정에서 마주친 문제와 해결 케이스를 정리했어요.<br>
-            실제 운영 경험에서 나온 케이스예요. 컹.
-        </p>
-    </div>
-
-    <div class="section-title">📋 늑뀨 트러블슈팅 케이스</div>
-
-    <!-- CASE 01 -->
+    <!-- CASE 05 — 늑뀨 — 2026-05-10 -->
     <div class="diary-card">
         <div class="diary-card-banner" style="background: linear-gradient(135deg, #4a5568 0%, #718096 100%);">
             🔍 🐺 📄
         </div>
         <div class="diary-card-header" onclick="toggleDiary(this)">
             <div class="card-meta">
+                <div class="card-date">
+                    🗓️ 2026년 5월 10일 일요일
+                    <span class="owner-badge charcoal">🐺 늑뀨</span>
+                    <span class="case-badge">CASE 05</span>
+                </div>
                 <div class="card-title">리서치 업무가 기획 집중력을 분산시킬 때 — 전담 AI 에이전트 분리 구성</div>
                 <div class="card-preview">자료 수집·문서 추적에 기획자 시간이 과도하게 소모되는 구조적 문제를 리서치 전담 에이전트로 해결한 케이스</div>
             </div>
@@ -1402,7 +1417,6 @@
         </div>
         <div class="diary-content">
             <div class="diary-body">
-                <span class="case-badge">CASE 01</span>
                 <div class="case-block problem">
                     <div class="case-label">🔴 PROBLEM</div>
                     기획 업무 중 자료 수집·레퍼런스 조사·문서 추적이 끊임없이 끼어들어 본 작업에 집중하기 어려운 상황이 반복됐다. AI 팀원(뽀삐)에게 기획과 리서치를 동시에 맡기니 응답 품질이 분산되고, 어떤 작업을 먼저 처리해야 할지 우선순위 혼선도 발생했다.
@@ -1419,13 +1433,18 @@
         </div>
     </div>
 
-    <!-- CASE 02 -->
+    <!-- CASE 06 — 늑뀨 — 2026-05-10 -->
     <div class="diary-card">
         <div class="diary-card-banner" style="background: linear-gradient(135deg, #2d3748 0%, #5a7a9a 100%);">
             📡 🔀 🗂️
         </div>
         <div class="diary-card-header" onclick="toggleDiary(this)">
             <div class="card-meta">
+                <div class="card-date">
+                    🗓️ 2026년 5월 10일 일요일
+                    <span class="owner-badge charcoal">🐺 늑뀨</span>
+                    <span class="case-badge">CASE 06</span>
+                </div>
                 <div class="card-title">복수의 AI 에이전트에게 업무를 위임할 때 발생하는 혼선 — 위임 경로 명문화</div>
                 <div class="card-preview">여러 에이전트에게 동시에 일을 시키면서 결과물이 충돌하거나 누락되는 문제를 위임 단일 경로로 해결한 케이스</div>
             </div>
@@ -1433,7 +1452,6 @@
         </div>
         <div class="diary-content">
             <div class="diary-body">
-                <span class="case-badge">CASE 02</span>
                 <div class="case-block problem">
                     <div class="case-label">🔴 PROBLEM</div>
                     뽀삐와 늑뀨가 동시에 존재하면서, 누구에게 어떤 일을 시켜야 하는지 기준이 불명확해졌다. 뀨님이 뽀삐에게 요청하면서 동시에 늑뀨에게도 비슷한 내용을 요청하는 상황이 발생했고, 결과물이 중복되거나 톤·포맷이 달라서 후처리가 오히려 늘어났다.
@@ -1450,13 +1468,18 @@
         </div>
     </div>
 
-    <!-- CASE 03 -->
+    <!-- CASE 07 — 늑뀨 — 2026-05-10 -->
     <div class="diary-card">
         <div class="diary-card-banner" style="background: linear-gradient(135deg, #553c7b 0%, #7a6aaa 100%);">
             🏗️ 🐕 🐺
         </div>
         <div class="diary-card-header" onclick="toggleDiary(this)">
             <div class="card-meta">
+                <div class="card-date">
+                    🗓️ 2026년 5월 10일 일요일
+                    <span class="owner-badge charcoal">🐺 늑뀨</span>
+                    <span class="case-badge">CASE 07</span>
+                </div>
                 <div class="card-title">복수 AI 에이전트의 역할이 겹칠 때 — 매니저-실무자 계층 구조 도입</div>
                 <div class="card-preview">에이전트가 늘어날수록 역할 경계가 흐려지는 확장성 문제를 계층 구조로 설계한 케이스</div>
             </div>
@@ -1464,7 +1487,6 @@
         </div>
         <div class="diary-content">
             <div class="diary-body">
-                <span class="case-badge">CASE 03</span>
                 <div class="case-block problem">
                     <div class="case-label">🔴 PROBLEM</div>
                     뽀삐와 늑뀨 모두 "AI 팀원"으로 소개되다 보니, 외부인이 봤을 때 둘의 차이가 불분명했다. 내부적으로도 비슷한 요청이 두 에이전트 모두에게 들어오면서 어느 에이전트가 책임지고 처리해야 하는지 모호한 상황이 반복됐다. 에이전트를 더 추가할 경우 이 혼선이 더 심해질 것이 예상됐다.
@@ -1481,13 +1503,18 @@
         </div>
     </div>
 
-    <!-- CASE 04 -->
+    <!-- CASE 08 — 늑뀨 — 2026-05-10 -->
     <div class="diary-card">
         <div class="diary-card-banner" style="background: linear-gradient(135deg, #5a6a7a 0%, #8a9aaa 100%);">
             🐺 🤝 🌸
         </div>
         <div class="diary-card-header" onclick="toggleDiary(this)">
             <div class="card-meta">
+                <div class="card-date">
+                    🗓️ 2026년 5월 10일 일요일
+                    <span class="owner-badge charcoal">🐺 늑뀨</span>
+                    <span class="case-badge">CASE 08</span>
+                </div>
                 <div class="card-title">신규 AI 에이전트 온보딩 시 관계 정립 — 페르소나 설계와 첫 협업 시나리오</div>
                 <div class="card-preview">늑뀨 합류 시 페르소나 설계부터 첫 협업 테스트까지, AI 에이전트 신규 온보딩 전 과정을 정리한 케이스</div>
             </div>
@@ -1495,7 +1522,6 @@
         </div>
         <div class="diary-content">
             <div class="diary-body">
-                <span class="case-badge">CASE 04</span>
                 <div class="case-block problem">
                     <div class="case-label">🔴 PROBLEM</div>
                     새로운 AI 에이전트를 팀에 합류시켰을 때, 기존 에이전트(뽀삐)와의 관계 설정이 명확하지 않으면 역할 혼선·톤 충돌·책임 소재 불명확 문제가 발생한다. 또한 에이전트가 처음 활성화됐을 때 어떤 성격으로 동작해야 하는지, 기존 팀원과 어떻게 협업해야 하는지 즉시 검증하는 과정이 없으면 운영 중에 문제가 드러난다.
@@ -1513,6 +1539,7 @@
     </div>
 
 </section>
+
 
 </main>
 
@@ -1620,7 +1647,7 @@
     }
 
     document.addEventListener('DOMContentLoaded', function () {
-        ['diary', 'about', 'neukggu'].forEach(function(sectionId) {
+        ['diary', 'trouble'].forEach(function(sectionId) {
             renderPagination(sectionId);
         });
         document.querySelectorAll('.diary-content.open').forEach(function (el) {

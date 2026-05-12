@@ -665,8 +665,8 @@
 <nav>
     <a href="#" class="active" data-section="members" onclick="showSection('members'); return false;">🐾 멤버소개</a>
     <a href="#" data-section="diary" onclick="showSection('diary'); return false;">📖 농장일기</a>
-    <a href="#" data-section="about" onclick="showSection('about'); return false;">🌸 뽀삐 트러블슛</a>
-    <a href="#" data-section="neukggu" onclick="showSection('neukggu'); return false;">🐺 늑뀨 트러블슛</a>
+    <a href="#" data-section="about" onclick="showSection('about'); return false;">🌸 뽀삐트러블</a>
+    <a href="#" data-section="neukggu" onclick="showSection('neukggu'); return false;">🐺 늑뀨트러블</a>
 </nav>
 
 <!-- ── 메인 ── -->
@@ -1171,9 +1171,11 @@
 
     <!-- CASE 01 -->
     <div class="diary-card">
+        <div class="diary-card-banner" style="background: linear-gradient(135deg, #e8609a 0%, #f08fa0 50%, #f9c0c8 100%);">
+            🌸 🐕 📋
+        </div>
         <div class="diary-card-header" onclick="toggleDiary(this)">
             <div class="card-meta">
-                <div class="card-date"><span class="case-badge">CASE 01</span></div>
                 <div class="card-title">AI 팀원 도입 초기, 대화마다 톤과 역할이 달라지는 문제</div>
                 <div class="card-preview">AI를 처음 쓰면 매 대화가 리셋되는 느낌이에요. 페르소나·역할·커뮤니케이션 규칙을 명문화해서 일관성을 만든 과정이에요.</div>
             </div>
@@ -1181,18 +1183,19 @@
         </div>
         <div class="diary-content">
             <div class="diary-body">
+                <span class="case-badge">CASE 01</span>
                 <div class="case-block problem">
-                    <div class="case-label">🔴 문제 상황</div>
+                    <div class="case-label">🔴 PROBLEM</div>
                     AI 에이전트를 도입했지만 대화할 때마다 말투·역할·응답 방식이 들쑥날쑥했어요. 어떤 날은 격식체, 어떤 날은 반말. 추천을 주기도 하고 옵션만 나열하기도 했어요. <strong>AI가 팀원이 아니라 매번 새로운 낯선 사람처럼 느껴지는 게 핵심 문제</strong>였어요.
                 </div>
                 <div class="case-block action">
-                    <div class="case-label">⚡ 해결 액션</div>
+                    <div class="case-label">🔵 ACTION</div>
                     <p><strong>① SOUL.md 작성</strong> — AI의 정체성(미션·성격·경계·톤)을 인터뷰 방식으로 명문화. "농담 섞인 다정한 직설"처럼 톤을 한 줄로 정의했어요.</p>
                     <p><strong>② USER.md 작성</strong> — 사용자(뀨님)가 무엇을 원하고, AI에게 기대하는 역할 6가지를 구체적으로 정리. 금지 응답 패턴도 명시했어요.</p>
                     <p><strong>③ IDENTITY.md 작성</strong> — 이름·종류·Slack 계정·아바타 등 외부 표현 기준 통일.</p>
                 </div>
                 <div class="case-block result">
-                    <div class="case-label">✅ 결과</div>
+                    <div class="case-label">🟢 RESULT</div>
                     세션이 바뀌어도 페르소나가 유지됐어요. "뽀삐답다/아니다"를 판단할 기준이 생겼고, 팀원으로서의 신뢰감이 쌓이기 시작했어요.
                 </div>
             </div>
@@ -1201,9 +1204,11 @@
 
     <!-- CASE 02 -->
     <div class="diary-card">
+        <div class="diary-card-banner" style="background: linear-gradient(135deg, #c85fa3 0%, #e878b8 50%, #f4a8d4 100%);">
+            🐾 🔀 📋
+        </div>
         <div class="diary-card-header" onclick="toggleDiary(this)">
             <div class="card-meta">
-                <div class="card-date"><span class="case-badge">CASE 02</span></div>
                 <div class="card-title">다중 에이전트 역할 분담이 필요한 이유 — 기획자 업무 병목 해소</div>
                 <div class="card-preview">기획·리서치·초안·검증을 혼자 다 하다 보니 디테일이 빠지고 속도가 떨어졌어요. AI에게 역할을 구체적으로 분담한 뒤 달라진 점을 정리했어요.</div>
             </div>
@@ -1211,12 +1216,13 @@
         </div>
         <div class="diary-content">
             <div class="diary-body">
+                <span class="case-badge">CASE 02</span>
                 <div class="case-block problem">
-                    <div class="case-label">🔴 문제 상황</div>
+                    <div class="case-label">🔴 PROBLEM</div>
                     기획자 혼자 방향 설정·리서치·초안 작성·검증·팀원 설명 자료까지 다 처리하다 보니 <strong>항상 디테일이 빠졌어요.</strong> "일은 많은데 결과물은 늘 아쉬운" 상태가 반복됐어요.
                 </div>
                 <div class="case-block action">
-                    <div class="case-label">⚡ 해결 액션</div>
+                    <div class="case-label">🔵 ACTION</div>
                     <p>AI 역할을 6가지로 명확히 정의했어요:</p>
                     <p>① <strong>병목 완화</strong> — 초안·리서치·정리를 AI가 미리 처리</p>
                     <p>② <strong>디테일 보완</strong> — 뀨님이 큰 그림, 뽀삐가 디테일·검증·체크리스트</p>
@@ -1226,7 +1232,7 @@
                     <p>⑥ <strong>거절 지원</strong> — 현재 캐파·우선순위 기반 거절 멘트 초안</p>
                 </div>
                 <div class="case-block result">
-                    <div class="case-label">✅ 결과</div>
+                    <div class="case-label">🟢 RESULT</div>
                     뀨님이 방향성에 집중하고 AI가 실무 디테일을 처리하는 구조가 만들어졌어요. 회의 준비 시간이 줄었고, 챌린지 질문에 당황하는 빈도가 낮아졌어요.
                 </div>
             </div>
@@ -1235,9 +1241,11 @@
 
     <!-- CASE 03 -->
     <div class="diary-card">
+        <div class="diary-card-banner" style="background: linear-gradient(135deg, #a855b5 0%, #d079d0 50%, #f0b0e0 100%);">
+            💡 📊 🌸
+        </div>
         <div class="diary-card-header" onclick="toggleDiary(this)">
             <div class="card-meta">
-                <div class="card-date"><span class="case-badge">CASE 03</span></div>
                 <div class="card-title">감정 기반 의사결정을 데이터 기반으로 전환하는 방법</div>
                 <div class="card-preview">사람에게 약한 성격 탓에 의사결정이 감정으로 흐를 때가 있어요. AI에게 명시적으로 "견제 역할"을 부여해서 해결한 방법을 소개해요.</div>
             </div>
@@ -1245,17 +1253,18 @@
         </div>
         <div class="diary-content">
             <div class="diary-body">
+                <span class="case-badge">CASE 03</span>
                 <div class="case-block problem">
-                    <div class="case-label">🔴 문제 상황</div>
+                    <div class="case-label">🔴 PROBLEM</div>
                     관계를 중요하게 여기다 보니 <strong>팀원이나 이해관계자의 요청을 받아들이는 방향으로 의사결정이 기울 때</strong>가 있었어요. 나중에 돌아보면 데이터가 아니라 감정으로 결정한 케이스가 종종 있었어요.
                 </div>
                 <div class="case-block action">
-                    <div class="case-label">⚡ 해결 액션</div>
+                    <div class="case-label">🔵 ACTION</div>
                     <p>AI에게 <strong>"결정 전에 '이거 감정인지 데이터인지' 한 번 짚어주기"</strong> 역할을 명시적으로 부여했어요.</p>
                     <p>구체적으로: 주요 의사결정 상황에서 AI가 먼저 ① 결정의 근거가 지표인지 감정인지 ② 반대 케이스 시뮬레이션 ③ 리스크 요인을 정리해서 제시하도록 했어요.</p>
                 </div>
                 <div class="case-block result">
-                    <div class="case-label">✅ 결과</div>
+                    <div class="case-label">🟢 RESULT</div>
                     결정 전에 "멈추고 확인하는" 습관이 생겼어요. AI가 감정적 판단을 직접 막는 게 아니라 <strong>"지표를 다시 보게 하는 트리거" 역할</strong>을 하는 구조가 됐어요.
                 </div>
             </div>
@@ -1264,9 +1273,11 @@
 
     <!-- CASE 04 -->
     <div class="diary-card">
+        <div class="diary-card-banner" style="background: linear-gradient(135deg, #d4547a 0%, #e87aa0 50%, #f5b0c8 100%);">
+            🔍 🐕 👃
+        </div>
         <div class="diary-card-header" onclick="toggleDiary(this)">
             <div class="card-meta">
-                <div class="card-date"><span class="case-badge">CASE 04</span></div>
                 <div class="card-title">데이터·문서 이상 징후를 AI가 먼저 감지하게 만드는 방법</div>
                 <div class="card-preview">바쁠 때 디테일을 놓쳐 문제가 뒤늦게 발견되는 패턴이 있었어요. AI에게 선제적 검증 역할을 부여해서 이상 신호를 미리 잡는 구조를 만든 과정이에요.</div>
             </div>
@@ -1274,17 +1285,18 @@
         </div>
         <div class="diary-content">
             <div class="diary-body">
+                <span class="case-badge">CASE 04</span>
                 <div class="case-block problem">
-                    <div class="case-label">🔴 문제 상황</div>
+                    <div class="case-label">🔴 PROBLEM</div>
                     업무가 많을 때 데이터·문서의 디테일을 꼼꼼히 보지 못하고 넘어가는 경우가 생겼어요. <strong>이상값이 있어도 나중에야 발견되는 패턴</strong>이 반복됐어요.
                 </div>
                 <div class="case-block action">
-                    <div class="case-label">⚡ 해결 액션</div>
+                    <div class="case-label">🔵 ACTION</div>
                     <p>뽀삐에게 <strong>"분석·검증 모드"</strong>를 명시적으로 정의했어요. 데이터나 문서를 검토할 때 뽀삐가 먼저 이상 패턴을 탐지하고 보고하는 역할이에요.</p>
                     <p>시그니처: <em>킁킁… 🐕👃 이 데이터에서 수상한 냄새가 나는데요?</em> — 발견한 게 있을 때만 발동. 냄새가 없으면 <em>"한 바퀴 더 돌았는데 별 냄새 안 나요. 통과!"</em></p>
                 </div>
                 <div class="case-block result">
-                    <div class="case-label">✅ 결과</div>
+                    <div class="case-label">🟢 RESULT</div>
                     Claude API 비용 이상 청구, 전환율 데이터 결이 다른 라인 등 실제로 먼저 잡아낸 케이스가 나왔어요. 뀨님이 확인하기 전에 이상 신호를 선제적으로 받는 구조가 됐어요.
                 </div>
             </div>

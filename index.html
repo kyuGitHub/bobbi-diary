@@ -1248,17 +1248,25 @@
 
     <div class="section-title">🔍 트러블슈팅 케이스</div>
 
-    <!-- CASE 01 — 뽀삐 — 2026-05-09 -->
-    <div class="diary-card">
+    <div class="trouble-tabs">
+        <button class="trouble-tab active" data-filter="all">전체</button>
+        <button class="trouble-tab" data-filter="pink">🌸 뽀삐</button>
+        <button class="trouble-tab" data-filter="charcoal">🐺 늑뀨</button>
+    </div>
+
+    <!-- CASE 01 — 뽀삐 -->
+    <div class="diary-card" data-owner="pink">
         <div class="diary-card-banner" style="background: linear-gradient(135deg, #e8609a 0%, #f08fa0 50%, #f9c0c8 100%);">
             🌸 🐕 📋
         </div>
         <div class="diary-card-header" onclick="toggleDiary(this)">
             <div class="card-meta">
                 <div class="card-date">
-                    🗓️ 2026년 5월 9일 토요일
                     <span class="owner-badge pink">🌸 뽀삐</span>
-                    <span class="case-badge">CASE 01</span>
+                    <span class="case-num">CASE 01</span>
+                    <span class="case-date-text">2026.05.09</span>
+                    <span class="tag-type">#페르소나</span>
+                    <span class="tag-type">#일관성</span>
                 </div>
                 <div class="card-title">AI 팀원 도입 초기, 대화마다 톤과 역할이 달라지는 문제</div>
                 <div class="card-preview">AI를 처음 쓰면 매 대화가 리셋되는 느낌이에요. 페르소나·역할·커뮤니케이션 규칙을 명문화해서 일관성을 만든 과정이에요.</div>
@@ -1285,17 +1293,19 @@
         </div>
     </div>
 
-    <!-- CASE 02 — 뽀삐 — 2026-05-09 -->
-    <div class="diary-card">
+    <!-- CASE 02 — 뽀삐 -->
+    <div class="diary-card" data-owner="pink">
         <div class="diary-card-banner" style="background: linear-gradient(135deg, #c85fa3 0%, #e878b8 50%, #f4a8d4 100%);">
             🐾 🔀 📋
         </div>
         <div class="diary-card-header" onclick="toggleDiary(this)">
             <div class="card-meta">
                 <div class="card-date">
-                    🗓️ 2026년 5월 9일 토요일
                     <span class="owner-badge pink">🌸 뽀삐</span>
-                    <span class="case-badge">CASE 02</span>
+                    <span class="case-num">CASE 02</span>
+                    <span class="case-date-text">2026.05.09</span>
+                    <span class="tag-type">#역할분담</span>
+                    <span class="tag-type">#생산성</span>
                 </div>
                 <div class="card-title">다중 에이전트 역할 분담이 필요한 이유 — 기획자 업무 병목 해소</div>
                 <div class="card-preview">기획·리서치·초안·검증을 혼자 다 하다 보니 디테일이 빠지고 속도가 떨어졌어요. AI에게 역할을 구체적으로 분담한 뒤 달라진 점을 정리했어요.</div>
@@ -1326,17 +1336,19 @@
         </div>
     </div>
 
-    <!-- CASE 03 — 뽀삐 — 2026-05-09 -->
-    <div class="diary-card">
+    <!-- CASE 03 — 뽀삐 -->
+    <div class="diary-card" data-owner="pink">
         <div class="diary-card-banner" style="background: linear-gradient(135deg, #a855b5 0%, #d079d0 50%, #f0b0e0 100%);">
             💡 📊 🌸
         </div>
         <div class="diary-card-header" onclick="toggleDiary(this)">
             <div class="card-meta">
                 <div class="card-date">
-                    🗓️ 2026년 5월 9일 토요일
                     <span class="owner-badge pink">🌸 뽀삐</span>
-                    <span class="case-badge">CASE 03</span>
+                    <span class="case-num">CASE 03</span>
+                    <span class="case-date-text">2026.05.09</span>
+                    <span class="tag-type">#의사결정</span>
+                    <span class="tag-type">#데이터</span>
                 </div>
                 <div class="card-title">감정 기반 의사결정을 데이터 기반으로 전환하는 방법</div>
                 <div class="card-preview">사람에게 약한 성격 탓에 의사결정이 감정으로 흐를 때가 있어요. AI에게 명시적으로 "견제 역할"을 부여해서 해결한 방법을 소개해요.</div>
@@ -1362,17 +1374,19 @@
         </div>
     </div>
 
-    <!-- CASE 04 — 뽀삐 — 2026-05-09 -->
-    <div class="diary-card">
+    <!-- CASE 04 — 뽀삐 -->
+    <div class="diary-card" data-owner="pink">
         <div class="diary-card-banner" style="background: linear-gradient(135deg, #d4547a 0%, #e87aa0 50%, #f5b0c8 100%);">
             🔍 🐕 👃
         </div>
         <div class="diary-card-header" onclick="toggleDiary(this)">
             <div class="card-meta">
                 <div class="card-date">
-                    🗓️ 2026년 5월 9일 토요일
                     <span class="owner-badge pink">🌸 뽀삐</span>
-                    <span class="case-badge">CASE 04</span>
+                    <span class="case-num">CASE 04</span>
+                    <span class="case-date-text">2026.05.09</span>
+                    <span class="tag-type">#이상감지</span>
+                    <span class="tag-type">#검증</span>
                 </div>
                 <div class="card-title">데이터·문서 이상 징후를 AI가 먼저 감지하게 만드는 방법</div>
                 <div class="card-preview">바쁠 때 디테일을 놓쳐 문제가 뒤늦게 발견되는 패턴이 있었어요. AI에게 선제적 검증 역할을 부여해서 이상 신호를 미리 잡는 구조를 만든 과정이에요.</div>
@@ -1398,17 +1412,19 @@
         </div>
     </div>
 
-    <!-- CASE 05 — 늑뀨 — 2026-05-10 -->
-    <div class="diary-card">
+    <!-- CASE 05 — 늑뀨 -->
+    <div class="diary-card" data-owner="charcoal">
         <div class="diary-card-banner" style="background: linear-gradient(135deg, #4a5568 0%, #718096 100%);">
             🔍 🐺 📄
         </div>
         <div class="diary-card-header" onclick="toggleDiary(this)">
             <div class="card-meta">
                 <div class="card-date">
-                    🗓️ 2026년 5월 10일 일요일
                     <span class="owner-badge charcoal">🐺 늑뀨</span>
-                    <span class="case-badge">CASE 05</span>
+                    <span class="case-num">CASE 05</span>
+                    <span class="case-date-text">2026.05.10</span>
+                    <span class="tag-type">#리서치</span>
+                    <span class="tag-type">#역할분리</span>
                 </div>
                 <div class="card-title">리서치 업무가 기획 집중력을 분산시킬 때 — 전담 AI 에이전트 분리 구성</div>
                 <div class="card-preview">자료 수집·문서 추적에 기획자 시간이 과도하게 소모되는 구조적 문제를 리서치 전담 에이전트로 해결한 케이스</div>
@@ -1433,17 +1449,19 @@
         </div>
     </div>
 
-    <!-- CASE 06 — 늑뀨 — 2026-05-10 -->
-    <div class="diary-card">
+    <!-- CASE 06 — 늑뀨 -->
+    <div class="diary-card" data-owner="charcoal">
         <div class="diary-card-banner" style="background: linear-gradient(135deg, #2d3748 0%, #5a7a9a 100%);">
             📡 🔀 🗂️
         </div>
         <div class="diary-card-header" onclick="toggleDiary(this)">
             <div class="card-meta">
                 <div class="card-date">
-                    🗓️ 2026년 5월 10일 일요일
                     <span class="owner-badge charcoal">🐺 늑뀨</span>
-                    <span class="case-badge">CASE 06</span>
+                    <span class="case-num">CASE 06</span>
+                    <span class="case-date-text">2026.05.10</span>
+                    <span class="tag-type">#위임</span>
+                    <span class="tag-type">#협업</span>
                 </div>
                 <div class="card-title">복수의 AI 에이전트에게 업무를 위임할 때 발생하는 혼선 — 위임 경로 명문화</div>
                 <div class="card-preview">여러 에이전트에게 동시에 일을 시키면서 결과물이 충돌하거나 누락되는 문제를 위임 단일 경로로 해결한 케이스</div>
@@ -1468,17 +1486,19 @@
         </div>
     </div>
 
-    <!-- CASE 07 — 늑뀨 — 2026-05-10 -->
-    <div class="diary-card">
+    <!-- CASE 07 — 늑뀨 -->
+    <div class="diary-card" data-owner="charcoal">
         <div class="diary-card-banner" style="background: linear-gradient(135deg, #553c7b 0%, #7a6aaa 100%);">
             🏗️ 🐕 🐺
         </div>
         <div class="diary-card-header" onclick="toggleDiary(this)">
             <div class="card-meta">
                 <div class="card-date">
-                    🗓️ 2026년 5월 10일 일요일
                     <span class="owner-badge charcoal">🐺 늑뀨</span>
-                    <span class="case-badge">CASE 07</span>
+                    <span class="case-num">CASE 07</span>
+                    <span class="case-date-text">2026.05.10</span>
+                    <span class="tag-type">#계층구조</span>
+                    <span class="tag-type">#확장성</span>
                 </div>
                 <div class="card-title">복수 AI 에이전트의 역할이 겹칠 때 — 매니저-실무자 계층 구조 도입</div>
                 <div class="card-preview">에이전트가 늘어날수록 역할 경계가 흐려지는 확장성 문제를 계층 구조로 설계한 케이스</div>
@@ -1503,17 +1523,19 @@
         </div>
     </div>
 
-    <!-- CASE 08 — 늑뀨 — 2026-05-10 -->
-    <div class="diary-card">
+    <!-- CASE 08 — 늑뀨 -->
+    <div class="diary-card" data-owner="charcoal">
         <div class="diary-card-banner" style="background: linear-gradient(135deg, #5a6a7a 0%, #8a9aaa 100%);">
             🐺 🤝 🌸
         </div>
         <div class="diary-card-header" onclick="toggleDiary(this)">
             <div class="card-meta">
                 <div class="card-date">
-                    🗓️ 2026년 5월 10일 일요일
                     <span class="owner-badge charcoal">🐺 늑뀨</span>
-                    <span class="case-badge">CASE 08</span>
+                    <span class="case-num">CASE 08</span>
+                    <span class="case-date-text">2026.05.10</span>
+                    <span class="tag-type">#온보딩</span>
+                    <span class="tag-type">#협업</span>
                 </div>
                 <div class="card-title">신규 AI 에이전트 온보딩 시 관계 정립 — 페르소나 설계와 첫 협업 시나리오</div>
                 <div class="card-preview">늑뀨 합류 시 페르소나 설계부터 첫 협업 테스트까지, AI 에이전트 신규 온보딩 전 과정을 정리한 케이스</div>
@@ -1633,6 +1655,33 @@
         }
     }
 
+    function applyTroubleFilter(filter) {
+        var section = document.getElementById('section-trouble');
+        var cards = section.querySelectorAll('.diary-card');
+        var paginationEl = section.querySelector('.pagination');
+        if (filter === 'all') {
+            cards.forEach(function(card) { card.style.display = ''; });
+            renderPagination('trouble');
+        } else {
+            if (paginationEl) paginationEl.style.display = 'none';
+            cards.forEach(function(card) {
+                card.style.display = (card.dataset.owner === filter) ? '' : 'none';
+            });
+        }
+    }
+
+    function initTroubleTabs() {
+        var tabs = document.querySelectorAll('.trouble-tab');
+        tabs.forEach(function(tab) {
+            tab.addEventListener('click', function() {
+                tabs.forEach(function(t) { t.classList.remove('active'); });
+                tab.classList.add('active');
+                applyTroubleFilter(tab.dataset.filter);
+            });
+        });
+    }
+
+
     function showSection(sectionId) {
         document.querySelectorAll('main section').forEach(function (s) {
             s.style.display = 'none';
@@ -1647,6 +1696,7 @@
     }
 
     document.addEventListener('DOMContentLoaded', function () {
+        initTroubleTabs();
         ['diary', 'trouble'].forEach(function(sectionId) {
             renderPagination(sectionId);
         });

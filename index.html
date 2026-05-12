@@ -638,6 +638,66 @@
             display: inline-block;
         }
 
+        /* ── 페이지네이션 ── */
+        .pagination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 28px;
+            padding-bottom: 4px;
+        }
+
+        .pagination-btn {
+            background: white;
+            border: 1.5px solid var(--blue-pale);
+            color: var(--blue);
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.84rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .pagination-btn:hover:not(:disabled) {
+            background: var(--blue);
+            color: white;
+            border-color: var(--blue);
+        }
+
+        .pagination-btn:disabled {
+            color: #ccc;
+            border-color: #eee;
+            cursor: default;
+            background: #fafafa;
+        }
+
+        .pagination-num {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: white;
+            border: 1.5px solid var(--blue-pale);
+            color: var(--text-sub);
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .pagination-num:hover,
+        .pagination-num.active {
+            background: var(--blue);
+            color: white;
+            border-color: var(--blue);
+        }
+
         /* ── 반응형 ── */
         @media (max-width: 600px) {
             header h1 { font-size: 1.6rem; }
@@ -1455,11 +1515,80 @@
 </footer>
 
 <script>
+    var ITEMS_PER_PAGE = 5;
+    var pageState = {};
+
+    function getPageCards(sectionId) {
+        return Array.from(document.querySelectorAll('#section-' + sectionId + ' .diary-card'));
+    }
+
+    function renderPagination(sectionId) {
+        var cards = getPageCards(sectionId);
+        var totalPages = Math.ceil(cards.length / ITEMS_PER_PAGE);
+        if (!pageState[sectionId]) pageState[sectionId] = 1;
+        var currentPage = pageState[sectionId];
+
+        cards.forEach(function(card, index) {
+            var cardPage = Math.floor(index / ITEMS_PER_PAGE) + 1;
+            card.style.display = (cardPage === currentPage) ? '' : 'none';
+        });
+
+        var section = document.getElementById('section-' + sectionId);
+        var paginationEl = section.querySelector('.pagination');
+
+        if (totalPages <= 1) {
+            if (paginationEl) paginationEl.style.display = 'none';
+            return;
+        }
+
+        if (!paginationEl) {
+            paginationEl = document.createElement('div');
+            paginationEl.className = 'pagination';
+            section.appendChild(paginationEl);
+        }
+        paginationEl.style.display = 'flex';
+        paginationEl.innerHTML = '';
+
+        var prevBtn = document.createElement('button');
+        prevBtn.className = 'pagination-btn';
+        prevBtn.textContent = '← 이전';
+        prevBtn.disabled = currentPage === 1;
+        prevBtn.addEventListener('click', function() { changePage(sectionId, currentPage - 1); });
+        paginationEl.appendChild(prevBtn);
+
+        for (var i = 1; i <= totalPages; i++) {
+            (function(pageNum) {
+                var numBtn = document.createElement('button');
+                numBtn.className = 'pagination-num' + (pageNum === currentPage ? ' active' : '');
+                numBtn.textContent = pageNum;
+                numBtn.addEventListener('click', function() { changePage(sectionId, pageNum); });
+                paginationEl.appendChild(numBtn);
+            })(i);
+        }
+
+        var nextBtn = document.createElement('button');
+        nextBtn.className = 'pagination-btn';
+        nextBtn.textContent = '다음 →';
+        nextBtn.disabled = currentPage === totalPages;
+        nextBtn.addEventListener('click', function() { changePage(sectionId, currentPage + 1); });
+        paginationEl.appendChild(nextBtn);
+    }
+
+    function changePage(sectionId, newPage) {
+        pageState[sectionId] = newPage;
+        renderPagination(sectionId);
+        var nav = document.querySelector('nav');
+        var navHeight = nav ? nav.offsetHeight : 0;
+        var section = document.getElementById('section-' + sectionId);
+        var top = section.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+    }
+
     function toggleDiary(headerEl) {
-        const card = headerEl.closest('.diary-card');
-        const content = card.querySelector('.diary-content');
-        const toggle = card.querySelector('.card-toggle');
-        const isOpen = content.classList.contains('open');
+        var card = headerEl.closest('.diary-card');
+        var content = card.querySelector('.diary-content');
+        var toggle = card.querySelector('.card-toggle');
+        var isOpen = content.classList.contains('open');
         if (isOpen) {
             content.classList.remove('open');
             toggle.textContent = '▼';
@@ -1483,6 +1612,9 @@
     }
 
     document.addEventListener('DOMContentLoaded', function () {
+        ['diary', 'about', 'neukggu'].forEach(function(sectionId) {
+            renderPagination(sectionId);
+        });
         document.querySelectorAll('.diary-content.open').forEach(function (el) {
             el.closest('.diary-card').querySelector('.card-toggle').textContent = '▲';
         });

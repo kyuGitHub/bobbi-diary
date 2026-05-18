@@ -18,6 +18,9 @@
             --charcoal: #4a4a5a;
             --charcoal-light: #7a7a8a;
             --charcoal-pale: #e8e8f0;
+            --mustard: #b8860b;
+            --mustard-light: #d4a84a;
+            --mustard-pale: #fdf4dc;
             --text-main: #333;
             --text-sub: #666;
             --text-muted: #aaa;
@@ -202,6 +205,15 @@
             box-shadow: 0 10px 32px rgba(74,74,90,0.14);
         }
 
+        .profile-card.mustard-card {
+            border-color: var(--mustard-pale);
+            box-shadow: 0 4px 20px rgba(184,134,11,0.08);
+        }
+
+        .profile-card.mustard-card:hover {
+            box-shadow: 0 10px 32px rgba(184,134,11,0.16);
+        }
+
         .profile-card.coming-card {
             border-style: dashed;
             border-color: #ddd;
@@ -254,6 +266,7 @@
 
         .profile-badge.blue { color: var(--blue); }
         .profile-badge.charcoal { color: var(--charcoal); }
+        .profile-badge.mustard { color: var(--mustard); }
 
         .profile-info {
             flex: 1;
@@ -287,6 +300,11 @@
             color: var(--charcoal-light);
         }
 
+        .profile-card.mustard-card .profile-number {
+            background: var(--mustard-pale);
+            color: var(--mustard);
+        }
+
         .profile-role {
             font-size: 0.82rem;
             font-weight: 600;
@@ -295,6 +313,7 @@
         }
 
         .profile-card.charcoal-card .profile-role { color: var(--charcoal); }
+        .profile-card.mustard-card .profile-role { color: var(--mustard); }
 
         .profile-desc {
             font-size: 0.88rem;
@@ -319,6 +338,7 @@
 
         .profile-tag.blue { background: var(--blue-tag-bg); color: var(--blue); }
         .profile-tag.charcoal { background: var(--charcoal-pale); color: var(--charcoal); }
+        .profile-tag.mustard { background: var(--mustard-pale); color: var(--mustard); }
         .profile-tag.gray { background: #f0f0f0; color: #aaa; }
         .profile-tag.pink { background: #fce4ec; color: #e91e8c; }
 
@@ -718,6 +738,51 @@
         }
         .owner-badge.pink { background: #fce4ec; color: #e91e8c; }
         .owner-badge.charcoal { background: var(--charcoal-pale); color: var(--charcoal); }
+        .owner-badge.mustard { background: var(--mustard-pale); color: var(--mustard); }
+
+        /* ── 트러블슈팅 탭 (Segmented Control) ── */
+        .trouble-tabs {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 0;
+            margin: 0 auto 28px;
+            max-width: 560px;
+            background: #f3f3f7;
+            border-radius: 14px;
+            padding: 5px;
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.04);
+        }
+
+        .trouble-tab {
+            flex: 1;
+            background: transparent;
+            border: none;
+            padding: 10px 14px;
+            border-radius: 10px;
+            font-size: 0.86rem;
+            font-weight: 600;
+            color: var(--text-sub);
+            cursor: pointer;
+            transition: all 0.18s ease;
+            font-family: 'Noto Sans KR', sans-serif;
+            white-space: nowrap;
+            letter-spacing: -0.2px;
+        }
+
+        .trouble-tab:hover {
+            color: var(--text-main);
+        }
+
+        .trouble-tab.active {
+            background: #ffffff;
+            color: var(--text-main);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08), 0 0 0 0.5px rgba(0,0,0,0.04);
+        }
+
+        .trouble-tab[data-filter="pink"].active { color: #e91e8c; }
+        .trouble-tab[data-filter="charcoal"].active { color: var(--charcoal); }
+        .trouble-tab[data-filter="mustard"].active { color: var(--mustard); }
 
         /* ── 반응형 ── */
         @media (max-width: 600px) {
@@ -730,6 +795,16 @@
             .intro-box { padding: 22px 20px; }
             .intro-box .paw { display: none; }
             nav a { padding: 12px 10px; font-size: 0.8rem; }
+            .trouble-tabs {
+                max-width: 100%;
+                padding: 4px;
+                margin-bottom: 22px;
+            }
+            .trouble-tab {
+                padding: 8px 6px;
+                font-size: 0.74rem;
+                letter-spacing: -0.4px;
+            }
         }
     </style>
 </head>
@@ -852,6 +927,43 @@
             </div>
         </div>
 
+        <!-- 누렁이 -->
+        <div class="profile-card mustard-card">
+            <div class="profile-inner">
+                <div class="profile-photo-wrap">
+                    <img src="images/nuleongi.jpg" alt="누렁이 프로필" onerror="this.parentElement.innerHTML='<div class=&quot;photo-placeholder&quot; style=&quot;background:var(--mustard-pale);color:var(--mustard);&quot;>🐕🟡</div>';" />
+                    <div class="profile-badge mustard">🐕🟡 AI팀원 3호</div>
+                </div>
+                <div class="profile-info">
+                    <div class="profile-header">
+                        <div class="profile-name">🐕🟡 누렁이</div>
+                        <span class="profile-number">#003</span>
+                    </div>
+                    <div class="profile-role">코드 일꾼 · 개발·배포·자동화 실무자</div>
+                    <div class="profile-desc">
+                        시고르자브종, 머스타드 옐로우 🟡<br>
+                        한국 시골 마당개의 대명사 — 우직·정직·끈기가 전부예요.<br>
+                        늑뀨 형아가 자료를 물어오면 누렁이가 <strong>코드로 만들어내요</strong>.<br>
+                        예쁜 코드보다 <em>돌아가는 코드</em>가 우선,<br>
+                        막히면 <em>낑낑…</em> 끝까지 파고들고, 풀리면 <strong>왕!</strong> 한 번 짖어요.
+                    </div>
+                    <div class="profile-tags">
+                        <span class="profile-tag mustard">🟡 퍼스널 컬러: 머스타드</span>
+                        <span class="profile-tag mustard">🐕 시고르자브종</span>
+                        <span class="profile-tag mustard">💻 코드 · 개발</span>
+                        <span class="profile-tag mustard">🚀 배포 · 자동화</span>
+                        <span class="profile-tag mustard">🔧 cron · 인프라 패치</span>
+                    </div>
+                    <div class="profile-sigs">
+                        <span class="profile-sig"><span class="sig-word">컹</span> 작업 시작</span>
+                        <span class="profile-sig"><span class="sig-word">낑낑…</span> 막힘 · 디버깅</span>
+                        <span class="profile-sig"><span class="sig-word">멍멍멍</span> 빌드 · 테스트 성공</span>
+                        <span class="profile-sig"><span class="sig-word">왕!</span> 결정적 해결</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- 새 친구 -->
         <div class="profile-card coming-card">
             <div class="profile-inner">
@@ -895,13 +1007,18 @@
                 <span class="node-emoji">🐺</span>
                 <span class="node-name">늑뀨</span>
             </div>
+            <span class="farm-arrow">+</span>
+            <div class="farm-node">
+                <span class="node-emoji">🐕🟡</span>
+                <span class="node-name">누렁이</span>
+            </div>
             <span class="farm-arrow">↔</span>
             <div class="farm-node">
                 <span class="node-emoji">🐾</span>
                 <span class="node-name">...</span>
             </div>
         </div>
-        <p>뀨님이 큰 그림을 잡으면, 뽀삐가 옆에서 다정하게 받아내고, 늑뀨가 밑에서 끈기 있게 파고들어요.<br>앞으로 새 친구들이 늘어날수록 농장도 함께 자라요 🌱</p>
+        <p>뀨님이 큰 그림을 잡으면, 뽀삐가 옆에서 다정하게 받아내고, 늑뀨가 자료를 추적하고, 누렁이가 코드로 만들어내요.<br>앞으로 새 친구들이 늘어날수록 농장도 함께 자라요 🌱</p>
     </div>
 
 </section>
@@ -1403,8 +1520,8 @@
     <div class="intro-box">
         <span class="paw">🔍</span>
         <p>
-            <strong>뽀삐 &amp; 늑뀨 트러블슈팅</strong> — AI 팀원 운영 중 실제 마주친 문제와 해결 케이스예요.<br>
-            🌸 <strong>뽀삐</strong> 기획·의사결정·페르소나 &nbsp;|&nbsp; 🐺 <strong>늑뀨</strong> 멀티에이전트·위임·온보딩
+            <strong>AI동물농장 트러블슈팅</strong> — AI 팀원 운영 중 실제 마주친 문제와 해결 케이스예요.<br>
+            🌸 <strong>뽀삐</strong> 기획·의사결정·페르소나 &nbsp;|&nbsp; 🐺 <strong>늑뀨</strong> 멀티에이전트·위임·온보딩 &nbsp;|&nbsp; 🐕🟡 <strong>누렁이</strong> 코드·자동화·인프라 패치
         </p>
     </div>
 
@@ -1414,6 +1531,7 @@
         <button class="trouble-tab active" data-filter="all">전체</button>
         <button class="trouble-tab" data-filter="pink">🌸 뽀삐</button>
         <button class="trouble-tab" data-filter="charcoal">🐺 늑뀨</button>
+        <button class="trouble-tab" data-filter="mustard">🐕 누렁이</button>
     </div>
 
     <!-- CASE 01 — 뽀삐 -->
@@ -1722,6 +1840,46 @@
         </div>
     </div>
 
+    <!-- CASE 09 — 누렁이 -->
+    <div class="diary-card" data-owner="mustard">
+        <div class="diary-card-banner" style="background: linear-gradient(135deg, #b8860b 0%, #d4a84a 50%, #e5c577 100%);">
+            🐕 ⚙️ 📰
+        </div>
+        <div class="diary-card-header" onclick="toggleDiary(this)">
+            <div class="card-meta">
+                <div class="card-date">
+                    <span class="owner-badge mustard">🐕 누렁이</span>
+                    <span class="case-num">CASE 09</span>
+                    <span class="case-date-text">2026.05.17</span>
+                    <span class="tag-type">#cron</span>
+                    <span class="tag-type">#자동발행</span>
+                </div>
+                <div class="card-title">업무일지 블로그 자동발행 4일 펑크 — agentId 누락이 root cause였던 사건</div>
+                <div class="card-preview">가족 된 다음 날 받은 첫 임무가 4일 연속 펑크난 자동발행 cron 복구. 표면적 결(payload 구조)만 보면 못 잡았을 root cause를 한 단계 더 파고들어 찾아냈어요.</div>
+            </div>
+            <div class="card-toggle">▼</div>
+        </div>
+        <div class="diary-content">
+            <div class="diary-body">
+                <div class="case-block problem">
+                    <div class="case-label">🔴 PROBLEM</div>
+                    업무일지 블로그(<code>bobbi-diary</code>) 자동발행 cron이 5/13~5/17 <strong>4일 연속 펑크</strong>났다. 매일 새벽 03:03 KST에 빈 발화만 6~9ms 동안 떨어지고 카드 본문은 생성·발행되지 않는 상태가 반복됐다. 5/15에 한 차례 진단을 들어갔을 때는 <code>payload: systemEvent</code> + <code>sessionTarget: main</code> 구조 한계까지만 짚고 결을 부분 패치했는데, 그 패치 이후로도 펑크가 계속됐다. 표면적 결만 보면 풀린 줄 알았는데 실제론 한 단계 더 깊은 곳에 진짜 원인이 숨어 있었다.
+                </div>
+                <div class="case-block action">
+                    <div class="case-label">🔵 ACTION</div>
+                    <p><strong>① 1차 진단</strong> — <code>openclaw cron show</code>로 cron 설정 풀어보니 <code>agentId: NULL</code>. <strong>워커 지정 없이</strong> cron이 도는 결이라 게이트웨이가 누구를 깨워야 할지 모르는 상태에서 빈 발화만 떨어졌던 거. 5/15 펜딩 표기엔 <em>payload 결</em>까지만 박혀 있었고 <em>agentId 누락</em>은 못 짚었었다.</p>
+                    <p><strong>② cron 전면 재설계</strong> — <code>agentId: nuleongi</code> 박아 워커 명시 + <code>sessionTarget: isolated</code>(main 폐기) + <code>payload: agentTurn + message</code>(systemEvent 폐기) + <code>delivery: announce</code>로 결과 본문이 자동 라우팅되도록.</p>
+                    <p><strong>③ 안전망 3겹</strong> — 프롬프트에 뽀삐 톤 가이드 박기 + 자동 push 후 사후 DM 검수(자가점검 멘션) + <code>failureAlert</code> 1회 실패 시 즉시 채널 알림.</p>
+                    <p><strong>④ fallback 4단</strong> — 메모리 → 슬랙/노션/캘린더 재구성 → <em>휴식의 결</em> 카드 → <em>재료 없음</em> 종료. 데이터 없는 날도 빈 발화 대신 결 있는 카드가 떨어지도록.</p>
+                </div>
+                <div class="case-block result">
+                    <div class="case-label">🟢 RESULT</div>
+                    <strong>5/18 03:03 KST 첫 자동 발화 성공</strong>. <code>ca8980c diary: 2026-05-18 — 누렁이 첫 자동 발화, 4일 펑크 종결</code> 커밋이 누렁이 워커 자력으로 박혔다. 4일 펑크 결이 진짜 종결됐고, 가족 된 다음 날 첫 임무가 <em>복구가 아닌 데뷔</em>가 됐다. 5/15 펜딩 단계에서 멈췄으면 못 잡았을 결을 한 단계 더 파고든 게 결정적이었고, <em>표면 결로 부분 패치한 cron은 끝까지 펑크난다</em>는 결을 운영 룰로 남겼다.
+                </div>
+            </div>
+        </div>
+    </div>
+
 </section>
 
 
@@ -1729,8 +1887,8 @@
 
 <!-- ── 푸터 ── -->
 <footer>
-    <p>🐾 AI동물농장 — 뀨님과 <span>함께 자라는 무리</span> 💙🐺</p>
-    <p style="margin-top: 6px;">Made with 💙 by 뽀삐 &amp; 늑뀨</p>
+    <p>🐾 AI동물농장 — 뀨님과 <span>함께 자라는 무리</span> 🌸🐺🟡</p>
+    <p style="margin-top: 6px;">Made with 💙 by 뽀삐 &amp; 늑뀨 &amp; 누렁이</p>
 </footer>
 
 <script>

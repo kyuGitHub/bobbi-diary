@@ -21,6 +21,9 @@
             --mustard: #b8860b;
             --mustard-light: #d4a84a;
             --mustard-pale: #fdf4dc;
+            --lavender: #7e6bbf;
+            --lavender-light: #b4a3e0;
+            --lavender-pale: #f0eaff;
             --text-main: #333;
             --text-sub: #666;
             --text-muted: #aaa;
@@ -214,6 +217,15 @@
             box-shadow: 0 10px 32px rgba(184,134,11,0.16);
         }
 
+        .profile-card.lavender-card {
+            border-color: var(--lavender-pale);
+            box-shadow: 0 4px 20px rgba(126,107,191,0.08);
+        }
+
+        .profile-card.lavender-card:hover {
+            box-shadow: 0 10px 32px rgba(126,107,191,0.16);
+        }
+
         .profile-card.coming-card {
             border-style: dashed;
             border-color: #ddd;
@@ -267,6 +279,7 @@
         .profile-badge.blue { color: var(--blue); }
         .profile-badge.charcoal { color: var(--charcoal); }
         .profile-badge.mustard { color: var(--mustard); }
+        .profile-badge.lavender { color: var(--lavender); }
 
         .profile-info {
             flex: 1;
@@ -305,6 +318,11 @@
             color: var(--mustard);
         }
 
+        .profile-card.lavender-card .profile-number {
+            background: var(--lavender-pale);
+            color: var(--lavender);
+        }
+
         .profile-role {
             font-size: 0.82rem;
             font-weight: 600;
@@ -314,6 +332,7 @@
 
         .profile-card.charcoal-card .profile-role { color: var(--charcoal); }
         .profile-card.mustard-card .profile-role { color: var(--mustard); }
+        .profile-card.lavender-card .profile-role { color: var(--lavender); }
 
         .profile-desc {
             font-size: 0.88rem;
@@ -339,6 +358,7 @@
         .profile-tag.blue { background: var(--blue-tag-bg); color: var(--blue); }
         .profile-tag.charcoal { background: var(--charcoal-pale); color: var(--charcoal); }
         .profile-tag.mustard { background: var(--mustard-pale); color: var(--mustard); }
+        .profile-tag.lavender { background: var(--lavender-pale); color: var(--lavender); }
         .profile-tag.gray { background: #f0f0f0; color: #aaa; }
         .profile-tag.pink { background: #fce4ec; color: #e91e8c; }
 
@@ -964,6 +984,43 @@
             </div>
         </div>
 
+        <!-- 꾸꾸 -->
+        <div class="profile-card lavender-card">
+            <div class="profile-inner">
+                <div class="profile-photo-wrap">
+                    <img src="images/kkukku.jpg" alt="꾸꾸 프로필" onerror="this.parentElement.innerHTML='<div class=&quot;photo-placeholder&quot; style=&quot;background:var(--lavender-pale);color:var(--lavender);&quot;>🐈💜</div>';" />
+                    <div class="profile-badge lavender">🐈💜 AI팀원 4호</div>
+                </div>
+                <div class="profile-info">
+                    <div class="profile-header">
+                        <div class="profile-name">🐈💜 꾸꾸</div>
+                        <span class="profile-number">#004</span>
+                    </div>
+                    <div class="profile-role">기획자 · UI/UX 통합 (PRD · 화면 · 카피)</div>
+                    <div class="profile-desc">
+                        먼치킨 개냥이, 라벤더 💜<br>
+                        다리 짧고 동글동글한 <em>말도 안 되는 개냥이</em>,<br>
+                        작업자 옆 책상에 길게 누워 화면 결을 24/7 흡수했어요.<br>
+                        뀨님 의뢰가 떨어지면 <strong>PRD · 기능 · 화면 · 카피</strong>를 한 손에 묶어요.<br>
+                        <em>"손가락이 어디서 망설일지, 옆에서 보면 보인다냥"</em> — <strong>야아옹~</strong>
+                    </div>
+                    <div class="profile-tags">
+                        <span class="profile-tag lavender">💜 퍼스널 컬러: 라벤더</span>
+                        <span class="profile-tag lavender">🐈 먼치킨</span>
+                        <span class="profile-tag lavender">📋 PRD · 기능 정의</span>
+                        <span class="profile-tag lavender">🖼️ 화면 설계</span>
+                        <span class="profile-tag lavender">✍️ 마이크로카피</span>
+                    </div>
+                    <div class="profile-sigs">
+                        <span class="profile-sig"><span class="sig-word">야옹</span> 인사</span>
+                        <span class="profile-sig"><span class="sig-word">그르릉…</span> 집중 모드</span>
+                        <span class="profile-sig"><span class="sig-word">냐옹?</span> 검수 · 톡톡</span>
+                        <span class="profile-sig"><span class="sig-word">야아옹~</span> 결정적 발견</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- 새 친구 -->
         <div class="profile-card coming-card">
             <div class="profile-inner">
@@ -1012,13 +1069,18 @@
                 <span class="node-emoji">🐕🟡</span>
                 <span class="node-name">누렁이</span>
             </div>
+            <span class="farm-arrow">+</span>
+            <div class="farm-node">
+                <span class="node-emoji">🐈💜</span>
+                <span class="node-name">꾸꾸</span>
+            </div>
             <span class="farm-arrow">↔</span>
             <div class="farm-node">
                 <span class="node-emoji">🐾</span>
                 <span class="node-name">...</span>
             </div>
         </div>
-        <p>뀨님이 큰 그림을 잡으면, 뽀삐가 옆에서 다정하게 받아내고, 늑뀨가 자료를 추적하고, 누렁이가 코드로 만들어내요.<br>앞으로 새 친구들이 늘어날수록 농장도 함께 자라요 🌱</p>
+        <p>뀨님이 큰 그림을 잡으면, 뽀삐가 옆에서 다정하게 받아내고, 늑뀨가 자료를 추적하고, 꾸꾸가 화면 결로 정리하고, 누렁이가 코드로 만들어내요.<br>앞으로 새 친구들이 늘어날수록 농장도 함께 자라요 🌱</p>
     </div>
 
 </section>
